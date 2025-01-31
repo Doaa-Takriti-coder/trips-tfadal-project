@@ -1,0 +1,119 @@
+
+*,body,html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.layout-container header {
+  background-color: aqua;
+}
+.layout-container header nav  ul{
+list-style: none;
+}
+.layout-container header nav  ul li {
+  display: inline-block;
+  padding: 15px;
+}
+.layout-container header nav  ul li a{
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+
+}
+
+
+.layout-container header nav  .active {
+  font-weight: bold;
+  color: #ff4081; /* تغيير اللون أو إضافة أي تنسيق آخر عند النشاط */
+}
+
+
+.trips-tab {
+  padding: 20px;
+}
+
+.trip-category {
+  margin-bottom: 30px;
+}
+
+.trip-category h3 {
+  margin-bottom: 10px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.trip-card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.trip-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.trip-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.trip-card.success {
+  background-color: #e0f7fa;
+  border: 2px solid #00bcd4;
+}
+
+.trip-card.failed {
+  background-color: #ffebee;
+  border: 2px solid #f44336;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px);
+}
+
+/* الـ container الأساسي */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4); /* خلفية مظللة */
+  z-index: 9999; /* تأكيد ظهور اللودينغ فوق جميع العناصر */
+}
+
+/* شكل اللودينغ: دائرة دوارة */
+.loading-spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1); /* خلفية الدائرة */
+  border-top: 8px solid #3498db; /* اللون الرئيسي للدائرة */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite; /* الدوران المستمر */
+}
+
+/* تعيين الأنيميشن (الدوران) */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* النص الذي يوضح أنه يتم تحميل الخريطة */
+.loading-container p {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+}
