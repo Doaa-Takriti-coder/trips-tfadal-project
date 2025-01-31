@@ -28,6 +28,7 @@ Follow these steps to get your development environment running:
 
    ```bash
    git clone https://github.com/Doaa-Takriti-coder/trips-tfadal-project.git
+   cd trips-dashboard
 
  2- Install Dependencies :
    npm install
